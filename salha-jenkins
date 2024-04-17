@@ -1,16 +1,14 @@
-pipeline { agent any stages {
-        stage('Test') {
+pipeline {
+    agent any
+    stages {
+        stage('build') {
             steps {
-                echo "Clarusway_Way to Reinvent Yourself"
-                sh 'echo using shell within Jenkinsfile'
-                echo 'not using shell in the Jenkinsfile'
+                echo 'This is the building step'
             }
         }
-        stage('Publish Test Results') {
+        stage('run') {
             steps {
-                echo "Clarusway_Way to Reinvent Yourself"
-                sh 'echo using shell within Jenkinsfile'
-                echo 'not using shell in the Jenkinsfile'
+                echo 'this is the run stage step'
             }
         }
     }
